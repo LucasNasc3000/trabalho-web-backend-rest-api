@@ -1,5 +1,6 @@
 package com.example.taskapirest.model;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 import jakarta.persistence.Entity;
@@ -14,7 +15,7 @@ public class Task {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private String assignmentDueDate;
+	private LocalDate assignmentDueDate;
 	private String responsible;
 	
 	
@@ -30,10 +31,10 @@ public class Task {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAssignmentDueDate() {
+	public LocalDate getAssignmentDueDate() {
 		return assignmentDueDate;
 	}
-	public void setAssignmentDueDate(String assignmentDueDate) {
+	public void setAssignmentDueDate(LocalDate assignmentDueDate) {
 		this.assignmentDueDate = assignmentDueDate;
 	}
 	public String getResponsible() {
