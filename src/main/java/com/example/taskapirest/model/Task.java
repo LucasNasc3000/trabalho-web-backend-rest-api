@@ -13,9 +13,9 @@ public class Task {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
-	private String dataEntrega;
-	private String responsavel;
+	private String name;
+	private String assignmentDueDate;
+	private String responsible;
 	
 	
 	public Long getId() {
@@ -24,31 +24,31 @@ public class Task {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getDataEntrega() {
-		return dataEntrega;
+	public String getAssignmentDueDate() {
+		return assignmentDueDate;
 	}
-	public void setDataEntrega(String dataEntrega) {
-		this.dataEntrega = dataEntrega;
+	public void setAssignmentDueDate(String assignmentDueDate) {
+		this.assignmentDueDate = assignmentDueDate;
 	}
-	public String getResponsavel() {
-		return responsavel;
+	public String getResponsible() {
+		return responsible;
 	}
-	public void setResponsavel(String responsavel) {
-		this.responsavel = responsavel;
+	public void setResponsible(String responsible) {
+		this.responsible = responsible;
 	}
 	@Override
 	public String toString() {
-		return "Contato [id=" + id + ", nome=" + nome + ", data de entrega=" + dataEntrega + ", responsável=" + responsavel + "]";
+		return "Contato [id=" + id + ", name=" + name + ", data de entrega=" + assignmentDueDate + ", responsável=" + responsible + "]";
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, nome, dataEntrega, responsavel);
+		return Objects.hash(id, name, assignmentDueDate, responsible);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -59,7 +59,7 @@ public class Task {
 		if (getClass() != obj.getClass())
 			return false;
 		Task other = (Task) obj;
-		return Objects.equals(nome, other.nome) && Objects.equals(dataEntrega, other.dataEntrega) && Objects.equals(id, other.id)
-				&& Objects.equals(responsavel, other.responsavel);
+		return Objects.equals(name, other.name) && Objects.equals(assignmentDueDate, other.assignmentDueDate) && Objects.equals(id, other.id)
+				&& Objects.equals(responsible, other.responsible);
 	}
 }
