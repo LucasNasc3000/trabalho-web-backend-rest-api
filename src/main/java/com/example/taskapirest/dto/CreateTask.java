@@ -10,7 +10,7 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 public record CreateTask (
-    @NotBlank(message = "Nome da tarefa não preenchido") @Size(max = 100) @Pattern(regexp = ".*\\S.*") String name, 
+    @NotBlank(message = "Nome da tarefa não preenchido") @Size(max = 100, message = "O nome da tarefa deve ter no máximo 100 caracteres") @Pattern(regexp = ".*\\S.*") String name, 
     @NotNull (message = "Data de entrega não preenchida") @JsonFormat(pattern = "dd/MM/yyyy") LocalDate assignmentDueDate, 
-    @NotBlank(message = "Nome do responsável não preenchido") @Size(max = 30) @Pattern(regexp = ".*\\S.*") String responsible) 
+    @NotBlank(message = "Nome do responsável não preenchido") @Size(max = 30, message = "O nome do responsável deve ter no máximo 30 caracteres") @Pattern(regexp = ".*\\S.*") String responsible) 
     {}
