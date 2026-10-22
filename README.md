@@ -35,4 +35,4 @@ spring.datasource.password=<sua_senha_se_nao_houver_deixe_vazio>
 5. Para acessar o swagger entre em: `http://localhost:8080/swagger-ui/index.html#/`
 
 ## 📚 Endpoints
-`GET /task · GET /task/{id} · POST /task · PATCH /task/{id} · DELETE /task{id}`
+`GET /task · GET /task/{id} · POST /task · PATCH /task/{id} · DELETE /task/{id}`
