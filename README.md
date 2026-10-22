@@ -31,5 +31,8 @@ spring.datasource.password=<sua_senha_se_nao_houver_deixe_vazio>
 // ...
 ```
 
-4. Execute no terminal: `./mvnw spring-boot:run` (linux) `mvnw.cmd spring-boot:run` (windows) para iniciar o servidor (http://localhost:8080)
+4. Execute no terminal: `./mvnw spring-boot:run` (linux) `mvnw.cmd spring-boot:run` (windows) para iniciar o servidor em http://localhost:8080
+5. Para acessar o swagger
 
+## 📚 Endpoints
+`GET /task · GET /task/{id} · POST /task · PATCH /task/{id} · DELETE /task{id}`
