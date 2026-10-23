@@ -53,4 +53,7 @@ Exemplo de corpo do `POST` (todos os campos obrigatórios, data em `dd/MM/yyyy`)
   "responsible": "Mônica Menezes"
 }
 ```
-O `PATCH` aceita qualquer subconjunto desses campos. Campos desconhecidos no JSON são ignorados.
+## 🧯 Problemas comuns
+- **`BUILD SUCCESS` e o terminal volta ao prompt:** a API não subiu. Verifique se o MySQL está em execução e busque o erro nos logs caso a causa seja outra.
+- **`Port 8080 was already in use`:** outro programa está usando a porta (por exemplo, o Tomcat do XAMPP). Feche-o ou defina `server.port=8081`.
+- **`Permission denied` no `./mvnw`:** rode `chmod +x mvnw`.
